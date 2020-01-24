@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="459px" height="459px" viewBox="0 0 459 459" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play-button-svgrepo-com" fill="#1F3654" fill-rule="nonzero">
+            <path d="M229.5,0 C102.751,0 0,102.751 0,229.5 C0,356.249 102.751,459 229.5,459 C356.249,459 459,356.249 459,229.5 C459,102.751 356.249,0 229.5,0 Z M310.292,239.651 L198.528,315.735 C194.767,318.295 189.898,318.566 185.876,316.439 C181.854,314.311 179.338,310.134 179.338,305.584 L179.338,153.416 C179.338,148.866 181.854,144.689 185.876,142.561 C189.898,140.434 194.767,140.704 198.528,143.265 L310.292,219.349 C313.651,221.636 315.662,225.436 315.662,229.5 C315.662,233.564 313.652,237.364 310.292,239.651 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
