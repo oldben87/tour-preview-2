@@ -212,16 +212,21 @@ h1 {
         var playerTime = document.getElementById('playerTime');
 
         function setDuration(e) {
-            playerTime.textContent = Math.floor(e.currentTarget.currentTime) + " : " + Math.floor(e.currentTarget.duration);
+            var currTime = Math.floor(e.currentTarget.currentTime);
+            var currDur = Math.floor(e.currentTarget.duration);
+
+            playerTime.textContent = "0:00 / 0:" + currDur;
         }
         myAudio.addEventListener("loadedmetadata", setDuration);
-        
-        // onTimeUpdate={e => setTime(e.currentTarget.currentTime)}
-        // onLoadedMetadata={e => setDur(e.currentTarget.duration)}
 
         function setTime(e) {
-           //console.log(e.currentTarget.currentTime)
-           playerTime.textContent = Math.floor(e.currentTarget.currentTime) + " : " + Math.floor(e.currentTarget.duration);
+          var currTime = Math.floor(e.currentTarget.currentTime);
+            var currDur = Math.floor(e.currentTarget.duration);
+            if(currTime < 10) {
+            playerTime.textContent = "0:0"+ currTime + " / 0:" + currDur;
+            } else {
+              playerTime.textContent = "0:"+ currTime + " / 0:" + currDur;
+            }
         }
 
         myAudio.addEventListener('timeupdate', setTime)
