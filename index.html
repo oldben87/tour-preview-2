@@ -218,25 +218,44 @@
         var myButton = document.getElementById('playerBtn');
         var playerTime = document.getElementById('playerTime');
 
+        function sec2time(timeInSeconds) {
+          
+          var date = new Date(null);
+          date.setSeconds(timeInSeconds);
+          var sec = date.getSeconds();
+          if (sec < 10) {
+            sec = "0" + sec;
+          }
+          var min = date.getMinutes();
+
+          let timeString = min + ':' + sec;
+          
+          return timeString;
+      }
+
         function setDuration(e) {
             var currTime = Math.floor(e.currentTarget.currentTime);
             var currDur = Math.floor(e.currentTarget.duration);
 
-            playerTime.textContent = "0:00 / 0:" + currDur;
+            playerTime.textContent = "0:00 / " + sec2time(currDur);
         }
+
         myAudio.addEventListener("loadedmetadata", setDuration);
 
         function setTime(e) {
           var currTime = Math.floor(e.currentTarget.currentTime);
             var currDur = Math.floor(e.currentTarget.duration);
-            if(currTime < 10) {
-            playerTime.textContent = "0:0"+ currTime + " / 0:" + currDur;
-            } else {
-              playerTime.textContent = "0:"+ currTime + " / 0:" + currDur;
-            }
+
+            playerTime.textContent = sec2time(currTime) + ' / ' + sec2time(currDur);
+        }
+        function resetPlayer(e) {
+          myButton.src = "./Shape.svg";
+          setDuration(e);
         }
 
         myAudio.addEventListener('timeupdate', setTime)
+
+        myAudio.addEventListener('ended',resetPlayer)
 
         function togglePlay() {
          
