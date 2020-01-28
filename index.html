@@ -1,280 +1,259 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-  <link
+  <head>
+    <link
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap"
       rel="stylesheet"
-  />
+    />
 
-  <style>
-    html {
-      font-size: 10px;
-    }
+    <style>
+      html {
+        font-size: 10px;
+      }
 
-    h1 {
-      letter-spacing: 0.55rem;
-      text-align: center;
-      font-size: 2.4rem;
-    }
+      h1 {
+        letter-spacing: 0.55rem;
+        text-align: center;
+        font-size: 2.4rem;
+      }
 
-    .playerMain {
-      display: flex;
-      flex-direction: column;
-      font-family: "Nunito Sans", sans-serif;
-      color: rgb(31, 54, 84);
-      font-size: 1.6rem;
-      line-height: 1.25;
-      text-align: initial;
-      text-transform: uppercase;
-      white-space: normal;
-    }
+      .playerMain {
+        display: flex;
+        flex-direction: column;
+        font-family: "Nunito Sans", sans-serif;
+        color: rgb(31, 54, 84);
+        font-size: 1.6rem;
+        line-height: 1.25;
+        text-align: initial;
+        text-transform: uppercase;
+        white-space: normal;
+      }
 
-    .playerWrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+      .playerWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .playerBtn {
-      max-width: 10rem;
-      padding: 0.5rem;
-      border: none;
-      background-color: white;
-      border-radius: 5px;
-      outline: 0;
-    }
-    .playerIcon {
-      max-width: 9rem;
-      display: block;
-      background-position: center;
-      background-size: inherit;
-    }
+      .playerBtn {
+        max-width: 10rem;
+        padding: 0.5rem;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        outline: 0;
+      }
+      .playerIcon {
+        max-width: 9rem;
+        display: block;
+        background-position: center;
+        background-size: inherit;
+      }
 
-    .playerCard {
-      display: flex;
-      justify-items: center;
-      align-items: center;
-    }
+      .playerCard {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+      }
 
-    /*
+      /*
     *
     * END OF PLAYER STYLES
     *
     */
 
-    .App {
-      display: flex;
-      flex-direction: column;
-      font-family: "Nunito Sans", sans-serif;
-      color: rgb(31, 54, 84);
-      font-size: 1.6rem;
-      line-height: 1.25;
-      text-align: initial;
-      text-transform: uppercase;
-      white-space: normal;
-    }
-
-    .compCont {
-      background-color: rgb(214, 221, 230);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /*padding: 2.4rem;*/
-    }
-
-    .compHead {
-      font-size: 3.6rem;
-      font-weight: bold;
-      letter-spacing: 0.55rem;
-      line-height: 1.25;
-      text-align: initial;
-      text-transform: uppercase;
-      white-space: normal;
-      -webkit-box-align: center;
-      align-items: center;
-      color: rgb(39, 45, 51);
-    }
-
-    .compBody {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .compBodyCopy {
-      width: 50%;
-      text-transform: none;
-      text-align: center;
-    }
-
-    .cardCont {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /*margin: 3.6rem; */
-    }
-    .cardWrap {
-      display: flex;
-      flex-direction: row;
-      border-radius: 1rem;
-      text-decoration: none;
-      background-color: white;
-      width: 680px;
-    }
-
-    .cardImage {
-      height: 237px;
-      background-color: red;
-      border-radius: calc(1rem - 1px) 0 0 0;
-      display: block;
-    }
-
-    .cardLine {
-      height: 9px;
-      background-color: rgb(31, 54, 84);
-    }
-
-    .cardBody {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    .cardBodyTitle {
-      font-weight: 600;
-      letter-spacing: 0px;
-      line-height: 1.25;
-      text-align: initial;
-      text-transform: none;
-      white-space: normal;
-      color: rgb(31, 54, 84);
-      margin-bottom: 1.6rem;
-    }
-
-    .cardBodyCopy {
-      color: rgb(92, 99, 108);
-      line-height: 1.5;
-      font-size: 1.6rem;
-      text-align: initial;
-      white-space: pre-line;
-      text-transform: none;
-      margin-bottom: 2.4rem;
-    }
-
-    .cardVLine {
-      width: 1rem;
-      background-color: rgb(31, 54, 84);
-    }
-
-  </style>
-</head>
-<body>
-    <div class="App">
-        <div class="cardCont">
-          <div class="cardWrap" >
-            <div>
-              <img alt="" src="./chelsea1.jpeg" class="cardImage" />
-              <div class="cardLine"></div>
-              <div class="cardBody">
-                <h3 class="cardBodyTitle">Chelsea Physic Garden Tour</h3>
-                <div class="cardBodyCopy">
-                  A tour around the beautiful Chelsea Physic Gardens
-                </div>
-              </div>
-            </div>
-            <div class="cardVLine"></div>
-            <div class="playerCard">
-                <div class="playerMain">
-                    <h1>Audio Tour Preview</h1>
-                    <audio id="myAudio" src="./chelsea1.mp3"></audio>
-                    <div class="playerWrap">
-                      <button
-                        
-                        class="playerBtn"
-                        type="button"
-                        onclick="togglePlay()"
-                      >
-                        <img
-                          id="playerBtn"
-                          class="playerIcon"
-                          alt="Play and Pause Button"
-                          src="Shape.svg" />
-                      </button>
-                      <p 
-                      id="playerTime"
-                      class="playerTime">                       
-                      </p>
-                    </div>
-                  </div>
-            </div>
-        </div>
-        </div>
-      </div>
-    <script type="text/javascript">
-
-        var myAudio = document.getElementById("myAudio");
-        myAudio.volume = 0.7;
-        var myButton = document.getElementById('playerBtn');
-        var playerTime = document.getElementById('playerTime');
-
-        function sec2time(timeInSeconds) {
-          
-          var date = new Date(null);
-          date.setSeconds(timeInSeconds);
-          var sec = date.getSeconds();
-          if (sec < 10) {
-            sec = "0" + sec;
-          }
-          var min = date.getMinutes();
-
-          let timeString = min + ':' + sec;
-          
-          return timeString;
+      .App {
+        display: flex;
+        flex-direction: column;
+        font-family: "Nunito Sans", sans-serif;
+        color: rgb(31, 54, 84);
+        font-size: 1.6rem;
+        line-height: 1.25;
+        text-align: initial;
+        text-transform: uppercase;
+        white-space: normal;
       }
 
-        function setDuration(e) {
-            var currTime = Math.floor(e.currentTarget.currentTime);
-            var currDur = Math.floor(e.currentTarget.duration);
+      .compCont {
+        background-color: rgb(214, 221, 230);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*padding: 2.4rem;*/
+      }
 
-            playerTime.textContent = "0:00 / " + sec2time(currDur);
+      .compHead {
+        font-size: 3.6rem;
+        font-weight: bold;
+        letter-spacing: 0.55rem;
+        line-height: 1.25;
+        text-align: initial;
+        text-transform: uppercase;
+        white-space: normal;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(39, 45, 51);
+      }
+
+      .compBody {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .compBodyCopy {
+        width: 50%;
+        text-transform: none;
+        text-align: center;
+      }
+
+      .cardCont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*margin: 3.6rem; */
+      }
+      .cardWrap {
+        display: flex;
+        flex-direction: row;
+        border-radius: 1rem;
+        text-decoration: none;
+        background-color: white;
+        width: 680px;
+      }
+
+      .cardImage {
+        height: 237px;
+        background-color: red;
+        border-radius: calc(1rem - 1px) 0 0 0;
+        display: block;
+      }
+
+      .cardLine {
+        height: 9px;
+        background-color: rgb(31, 54, 84);
+      }
+
+      .cardBody {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .cardBodyTitle {
+        font-weight: 600;
+        letter-spacing: 0px;
+        line-height: 1.25;
+        text-align: initial;
+        text-transform: none;
+        white-space: normal;
+        color: rgb(31, 54, 84);
+        margin-bottom: 1.6rem;
+      }
+
+      .cardBodyCopy {
+        color: rgb(92, 99, 108);
+        line-height: 1.5;
+        font-size: 1.6rem;
+        text-align: initial;
+        white-space: pre-line;
+        text-transform: none;
+        margin-bottom: 2.4rem;
+      }
+
+      .cardVLine {
+        width: 1rem;
+        background-color: rgb(31, 54, 84);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="App">
+      <div class="cardCont">
+        <div class="cardWrap">
+          <div>
+            <img alt="" src="./chelsea1.jpeg" class="cardImage" />
+            <div class="cardLine"></div>
+            <div class="cardBody">
+              <h3 class="cardBodyTitle">Chelsea Physic Garden Tour</h3>
+              <div class="cardBodyCopy">
+                A tour around the beautiful Chelsea Physic Gardens
+              </div>
+            </div>
+          </div>
+          <div class="cardVLine"></div>
+          <div class="playerCard">
+            <div class="playerMain">
+              <h1>Audio Tour Preview</h1>
+              <audio id="myAudio" src="./chelsea1.mp3"></audio>
+              <div class="playerWrap">
+                <button class="playerBtn" type="button" onclick="togglePlay()">
+                  <img
+                    id="playerBtn"
+                    class="playerIcon"
+                    alt="Play and Pause Button"
+                    src="Shape.svg"
+                  />
+                </button>
+                <p id="playerTime" class="playerTime"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var myAudio = document.getElementById("myAudio");
+      myAudio.volume = 0.7;
+      var myButton = document.getElementById("playerBtn");
+      var playerTime = document.getElementById("playerTime");
+
+      function sec2time(timeInSeconds) {
+        var date = new Date(null);
+        date.setSeconds(timeInSeconds);
+        var sec = date.getSeconds();
+        if (sec < 10) {
+          sec = "0" + sec;
         }
+        var min = date.getMinutes();
 
-        myAudio.addEventListener("loadedmetadata", setDuration);
+        let timeString = min + ":" + sec;
 
-        function setTime(e) {
-          var currTime = Math.floor(e.currentTarget.currentTime);
-            var currDur = Math.floor(e.currentTarget.duration);
+        return timeString;
+      }
 
-            playerTime.textContent = sec2time(currTime) + ' / ' + sec2time(currDur);
-        }
-        function resetPlayer(e) {
+      function setDuration(e) {
+        var currTime = Math.floor(e.currentTarget.currentTime);
+        var currDur = Math.floor(e.currentTarget.duration);
+
+        playerTime.textContent = "0:00 / " + sec2time(currDur);
+      }
+
+      function setTime(e) {
+        var currTime = Math.floor(e.currentTarget.currentTime);
+        var currDur = Math.floor(e.currentTarget.duration);
+
+        playerTime.textContent = sec2time(currTime) + " / " + sec2time(currDur);
+      }
+      function resetPlayer(e) {
+        myButton.src = "./Shape.svg";
+        setDuration(e);
+      }
+
+      function togglePlay() {
+        console.log("play paused pressed");
+        if (myAudio.paused) {
+          myAudio.play();
+          myButton.src = "./Shape2.svg";
+        } else {
+          myAudio.pause();
           myButton.src = "./Shape.svg";
-          setDuration(e);
         }
+      }
 
-        myAudio.addEventListener('timeupdate', setTime)
-
-        myAudio.addEventListener('ended',resetPlayer)
-
-        function togglePlay() {
-         
-            console.log('play paused pressed');
-            if (myAudio.paused) {
-                myAudio.play();
-                myButton.src = "./Shape2.svg";  
-            } else {
-                myAudio.pause();
-                myButton.src = "./Shape.svg";
-            }
-
-        };
-
-
-
-
-
+      myAudio.addEventListener("loadedmetadata", setDuration);
+      myAudio.addEventListener("timeupdate", setTime);
+      myAudio.addEventListener("ended", resetPlayer);
     </script>
-
-</body>
+  </body>
 </html>
