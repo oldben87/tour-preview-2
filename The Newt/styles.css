@@ -1,6 +1,5 @@
 html {
   font-size: 10px;
-  background-color: cornflowerblue;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
 h1 {
   letter-spacing: 0.55rem;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 
 .playerMain {
@@ -55,15 +54,6 @@ h1 {
   align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
-  .playerIcon {
-    max-width: 9rem;
-  }
-  .playerWrap {
-    width: 320px;
-  }
-}
-
 /*
     *
     * END OF PLAYER STYLES
@@ -85,7 +75,7 @@ h1 {
 .cardCont {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .cardWrap {
   display: flex;
@@ -93,7 +83,8 @@ h1 {
   border-radius: 1rem;
   text-decoration: none;
   background-color: white;
-  max-width: 100%;
+  width: 400px;
+  margin: 1rem;
 }
 
 .cardImage {
@@ -102,22 +93,8 @@ h1 {
   vertical-align: middle;
   border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
 }
-
-@media only screen and (min-width: 768px) {
-  .cardWrap {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    max-width: 680px;
-  }
-
-  .cardImage {
-    border-radius: calc(1rem - 1px) 0 0 0;
-  }
-}
-
 .cardLine {
-  height: 9px;
+  height: 10px;
   background-color: rgb(31, 54, 84);
 }
 
@@ -148,13 +125,42 @@ h1 {
   margin-bottom: 2.4rem;
 }
 
-.cardVLine {
-  width: 1rem;
-  background-color: rgb(31, 54, 84);
-}
-
 @media only screen and (min-width: 768px) {
+  .playerIcon {
+    max-width: 9rem;
+  }
+  .playerWrap {
+    width: 320px;
+  }
+
   .cardBody {
     display: flex;
+  }
+  .cardCont {
+    justify-content: center;
+  }
+  .cardWrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 680px;
+  }
+
+  .cardImage {
+    border-radius: calc(1rem - 1px) 0 0 0;
+  }
+
+  .contWrap {
+    border-right: 10px solid rgb(31, 54, 84);
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .cardBodyTitle {
+    font-size: 2.4rem;
+  }
+
+  .cardBodyCopy {
+    font-size: 1.8rem;
   }
 }
