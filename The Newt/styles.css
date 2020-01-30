@@ -135,6 +135,7 @@ h1 {
 
   .cardBody {
     display: flex;
+    display: -ms-flexbox;
   }
   .cardCont {
     justify-content: center;
