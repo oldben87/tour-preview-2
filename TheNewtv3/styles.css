@@ -1,0 +1,167 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  letter-spacing: 0.55rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.playerMain {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito Sans", sans-serif;
+  color: rgb(31, 54, 84);
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-align: initial;
+  text-transform: uppercase;
+  white-space: normal;
+  align-items: center;
+  width: 100%;
+}
+
+.playerWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerBtn {
+  max-width: 10rem;
+  padding: 0.8rem;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  outline: 0;
+}
+.playerIcon {
+  max-width: 5rem;
+  display: block;
+  background-position: center;
+  background-size: inherit;
+}
+
+.playerCard {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+/*
+    *
+    * END OF PLAYER STYLES
+    *
+    */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito Sans", sans-serif;
+  color: rgb(31, 54, 84);
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-align: initial;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.cardCont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  text-decoration: none;
+  background-color: white;
+  width: 400px;
+  margin: 1rem;
+}
+
+.cardImage {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+.cardLine {
+  height: 10px;
+  background-color: rgb(31, 54, 84);
+}
+
+.cardBody {
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.cardBodyTitle {
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 1.25;
+  text-align: initial;
+  text-transform: none;
+  white-space: normal;
+  color: rgb(31, 54, 84);
+  margin-bottom: 1.6rem;
+}
+
+.cardBodyCopy {
+  color: rgb(92, 99, 108);
+  line-height: 1.5;
+  font-size: 1.6rem;
+  text-align: initial;
+  white-space: pre-line;
+  text-transform: none;
+  margin-bottom: 2.4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .playerIcon {
+    max-width: 9rem;
+  }
+  .playerWrap {
+    width: 320px;
+  }
+
+  .cardBody {
+    display: flex;
+    display: -ms-flexbox;
+  }
+  .cardCont {
+    justify-content: center;
+  }
+  .cardWrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 680px;
+  }
+
+  .cardImage {
+    border-radius: calc(1rem - 1px) 0 0 0;
+  }
+
+  .contWrap {
+    border-right: 10px solid rgb(31, 54, 84);
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .cardBodyTitle {
+    font-size: 2.4rem;
+  }
+
+  .cardBodyCopy {
+    font-size: 1.8rem;
+  }
+}
