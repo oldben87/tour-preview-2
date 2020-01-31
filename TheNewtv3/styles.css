@@ -21,17 +21,35 @@ h1 {
   font-size: 1.6rem;
   line-height: 1.25;
   text-align: initial;
-  justify-items: space-between;
+  justify-items: stretch;
   text-transform: uppercase;
   white-space: normal;
-  width: 100%;
+  width: 600px;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px 3px #636363;
+  margin: 1rem;
 }
 .imageWrap {
   background-image: url("Newt.jpg");
-  width: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: calc(1rem - 1px) 0 0 calc(1rem - 1px);
 }
 .contentWrap {
-  height: 100%;
+  height: 320px;
+  width: 320px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 .playerBtn {
   max-width: 10rem;
@@ -42,8 +60,47 @@ h1 {
   outline: 0;
 }
 .playerIcon {
-  max-width: 5rem;
+  max-width: 10rem;
   display: block;
   background-position: center;
   background-size: inherit;
+}
+
+.contentTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.shareBtn {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.shareIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.playerContent {
+  text-transform: none;
+}
+
+.contentCopy {
+  color: #636363;
+}
+.contentName {
+  letter-spacing: 0;
+  text-align: start;
+}
+
+.contentFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  height: 40px;
 }
