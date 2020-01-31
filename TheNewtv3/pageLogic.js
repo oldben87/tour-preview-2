@@ -1,6 +1,6 @@
 var myAudio = document.getElementById("myAudio");
 myAudio.volume = 0.7;
-var myButton = document.getElementById("playerBtn");
+var myButton = document.getElementById("playerIcon");
 var playerTime = document.getElementById("playerTime");
 
 function sec2time(timeInSeconds) {
@@ -31,7 +31,7 @@ function setTime(e) {
   playerTime.textContent = sec2time(currTime) + " / " + sec2time(currDur);
 }
 function resetPlayer(e) {
-  myButton.src = "./Shape.svg";
+  myButton.src = "./play.svg";
   setDuration(e);
 }
 
@@ -39,10 +39,10 @@ function togglePlay() {
   console.log("play paused pressed");
   if (myAudio.paused) {
     myAudio.play();
-    myButton.src = "./Shape2.svg";
+    myButton.src = "./pause.svg";
   } else {
     myAudio.pause();
-    myButton.src = "./Shape.svg";
+    myButton.src = "./play.svg";
   }
 }
 
