@@ -27,11 +27,18 @@ function setDuration(e) {
 function setTime(e) {
   var currTime = Math.floor(e.currentTarget.currentTime);
   var currDur = Math.floor(e.currentTarget.duration);
+  var progBar = document.getElementById("progBar");
 
+  //Get & Set Percentage Complete
+  var percent = (currTime * 100) / currDur;
+  console.log(Math.floor(percent));
+
+  progBar.style.width = `${percent}%`;
   playerTime.textContent = sec2time(currTime) + " / " + sec2time(currDur);
 }
 function resetPlayer(e) {
   myButton.src = "./play.svg";
+  document.getElementById("progBar").style.width = 0;
   setDuration(e);
 }
 

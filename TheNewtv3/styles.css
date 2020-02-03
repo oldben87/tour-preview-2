@@ -5,6 +5,11 @@ html {
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 h1 {
@@ -12,10 +17,9 @@ h1 {
   text-align: center;
   font-size: 1.8rem;
 }
-
 .App {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: "Nunito Sans", sans-serif;
   color: rgb(31, 54, 84);
   font-size: 1.6rem;
@@ -24,48 +28,55 @@ h1 {
   justify-items: stretch;
   text-transform: uppercase;
   white-space: normal;
-  width: 600px;
-  border-radius: 1rem;
-  box-shadow: 0 0 5px 3px #636363;
-  margin: 1rem;
+  width: 95%;
+  height: 95vh;
+  box-shadow: 0 0 3px 3px #b9b9b9;
+  border-radius: 2px;
+}
+.appWrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 .imageWrap {
   background-image: url("Newt.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 320px;
-  width: 320px;
+  height: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border-radius: calc(1rem - 1px) 0 0 calc(1rem - 1px);
+  border-radius: 2px 0 0 0;
+}
+
+.playerBtn {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+}
+.playerBtn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.playerIcon {
+  max-width: 10rem;
+  background-position: center;
+  background-size: inherit;
 }
 .contentWrap {
-  height: 320px;
-  width: 320px;
+  height: 100%;
+  width: 50%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
 }
-.playerBtn {
-  max-width: 10rem;
-  padding: 0.8rem;
-  border: none;
-  background-color: transparent;
-  border-radius: 5px;
-  outline: 0;
-}
-.playerIcon {
-  max-width: 10rem;
-  display: block;
-  background-position: center;
-  background-size: inherit;
-}
-
 .contentTitle {
   display: flex;
   flex-direction: row;
@@ -90,7 +101,7 @@ h1 {
 }
 
 .contentCopy {
-  color: #636363;
+  color: #b9b9b9;
 }
 .contentName {
   letter-spacing: 0;
@@ -100,7 +111,27 @@ h1 {
 .contentFooter {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
   height: 40px;
+  font-size: 1rem;
+}
+
+.footerTitle {
+  font-size: 1.2rem !important;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+}
+
+.progCont {
+  height: 5px;
+  width: 100%;
+  background-color: #b9b9b9;
+  border-radius: 0 0 2px 2px;
+}
+
+#progBar {
+  height: 100%;
+  width: 0;
+  background-color: rgb(31, 54, 84);
 }
